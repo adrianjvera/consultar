@@ -4,23 +4,27 @@
 	<meta charset="UTF-8">
 	<title>Consultar datos</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="normalize.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 </head>
 <body>
-    <section>
-        <form role="form" id="formulario">
-            <div class="form-group">
-                <label for="cedula">Cedula</label>
-                <input type="text" class="form-control" id="cedula" placeholder="Cedula" style="width:30%;">            
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form role="form" id="formulario">
+                    <div class="form-group">
+                        <label for="cedula">Cédula</label>
+                        <input type="text" class="form-control" id="cedula" placeholder="Cedula" style="width:45%;">            
+                    </div>
+                    <div class="form-group">
+                        <label for="expediente">Número de expediente (Buscar en SASE)</label>
+                        <input type="text" class="form-control" id="expediente" placeholder="Expediente" style="width:45%;">
+                    </div>
+                    <button class="btn btn-primary" id="boton" onclick="consultar();" style="width:20%;">Descargar</button>
+                </form> 
             </div>
-            <div class="form-group">
-                <label for="expediente">Expediente</label>
-                <input type="text" class="form-control" id="expediente" placeholder="Expediente" style="width:30%;">
-            </div>
-            <button class="btn btn-default" id="boton" onclick="consultar();" style="width:20%;">Descargar</button>
-        </form> 
-    </section>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
